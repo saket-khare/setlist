@@ -1,0 +1,703 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Setlist App - Product Requirements Document (PRD)
+
+TL;DR
+
+Setlist App is a lightweight, mobile-first web application designed for personal jammers, amateur musicians, and home performers to easily save, tag, browse, and organize songs for jam sessions. The platform enables users to manage songs using rich metadata and powerful filters, helping curate setlists and elevate every home music experience.
+
+
+
+Goals
+
+Business Goals
+
+
+
+
+
+Launch an MVP to validate the need for personal setlist management among amateur musicians within 6 weeks.
+
+
+
+Achieve 500 active users in the first 3 months post-launch via organic and word-of-mouth growth.
+
+
+
+Build the foundation for a scalable product that can support future enhancements and third-party integrations.
+
+User Goals
+
+
+
+
+
+Allow users to quickly save and organize all their jam-worthy songs in one place.
+
+
+
+Enable intuitive tagging and filtering to help users discover songs matching specific moods, scales, or occasions.
+
+
+
+Facilitate seamless creation, management, and sharing of custom setlists.
+
+
+
+Provide a fast, smooth, and mobile-friendly experience from any device.
+
+Non-Goals
+
+
+
+
+
+No initial support for auto-fetching song metadata from external sources like YouTube or Spotify.
+
+
+
+No real-time collaborative jam features in MVP.
+
+
+
+No audio playback or editing functionality at launch.
+
+
+
+User Stories
+
+Persona 1: Rohan, Personal Music Jammer (28, IT Professional)
+
+
+
+
+
+As a music enthusiast, I want to save and tag my favorite songs so that I can quickly access them for weekend jam sessions.
+
+
+
+As a casual performer, I want to filter songs by mood and scale so that I can set the right ambience when friends visit.
+
+
+
+As a setlist curator, I want to reorder songs in a playlist so that my jam flow feels natural.
+
+Persona 2: Priya, Amateur Singer (23, College Student)
+
+
+
+
+
+As a singer, I want to organize songs by era and singer so that I can pull up retro/classic or modern pieces depending on my mood.
+
+
+
+As a home performer, I want to create themed setlists (e.g., “Rainy Day Melodies”) and share them with my peers.
+
+Persona 3: Dev, Home Performer (34, Teacher)
+
+
+
+
+
+As a performer, I want to quickly search a song by title, movie, or tags so I can find what I need even with a large library.
+
+
+
+As a user, I want to create custom tags (e.g., “difficult,” “warmup”) so I can personalize how I organize my songs.
+
+
+
+Functional Requirements
+
+
+
+
+
+Song Management (Priority: High)
+
+
+
+
+
+Manually add new songs with metadata: Title, Singer, Movie/Album, Scale, Era, Actor, Shayari (yes/no).
+
+
+
+Attach custom and predefined tags to each song.
+
+
+
+Edit or delete any existing song.
+
+
+
+Tagging System (Priority: High)
+
+
+
+
+
+Support for predefined tags (Mood, Emotion, Occasion, Pace, Other).
+
+
+
+Users can create unlimited custom tags.
+
+
+
+Assign multiple tags to a song.
+
+
+
+Tag management UI for adding, editing, or deleting tags.
+
+
+
+Song Discovery (Priority: High)
+
+
+
+
+
+Filter songs by tags, mood, emotion, scale, era, singer, or movie.
+
+
+
+Search songs by text (title, singer, movie/album).
+
+
+
+Responsive browser for navigating filtered & searched results.
+
+
+
+Setlists (Priority: High)
+
+
+
+
+
+Create and name new setlists.
+
+
+
+Add, remove, and reorder songs within a setlist.
+
+
+
+Generate smart setlists using filters (e.g., “upbeat friendship songs”).
+
+
+
+Share setlists via public, read-only links.
+
+
+
+Accounts & Sharing (Priority: High)
+
+
+
+
+
+User authentication with account creation and login.
+
+
+
+Private song library scoped to each user.
+
+
+
+Share individual songs or full setlists publicly via unique link (read-only).
+
+
+
+User Experience
+
+Entry Point & First-Time User Experience
+
+
+
+
+
+Users discover the app through direct link, search, or referral.
+
+
+
+First access presents a mobile-optimized login/signup screen.
+
+
+
+Optional onboarding walkthrough highlights “Add Song,” “Tag,” “Create Setlist,” and “Share” features.
+
+
+
+Sample songs can help demonstrate capabilities (can be dismissed at first login).
+
+Core Experience
+
+
+
+
+
+Step 1: Add Song
+
+
+
+
+
+User taps “+ Add Song” and fills out title, singer, album/movie, scale, era, actor, shayari, and selects tags (predefined/custom).
+
+
+
+Immediate validation for required fields, simple UI with large inputs.
+
+
+
+On successful add, song appears in “My Songs”.
+
+
+
+Step 2: Tag Songs
+
+
+
+
+
+Tag picker/lister appears while adding or editing songs.
+
+
+
+User can add new tags instantly without leaving flow.
+
+
+
+Tags are visually distinct pills for easy scanability.
+
+
+
+Step 3: Discover & Browse
+
+
+
+
+
+Song browser with persistent filter/search bar.
+
+
+
+Users apply any combination of tag, mood, or metadata filters.
+
+
+
+Songs update in real time as filters are applied.
+
+
+
+Step 4: Search
+
+
+
+
+
+Universal search at top of main screen.
+
+
+
+Results highlight matched text in titles or metadata.
+
+
+
+Step 5: Create and Manage Setlists
+
+
+
+
+
+Clear “Create Setlist” button guides user to input name, select/add songs.
+
+
+
+Drag-and-drop (or up/down arrows) to reorder songs.
+
+
+
+Option to auto-generate list based on live filters.
+
+
+
+Step 6: Share
+
+
+
+
+
+For any setlist or song, user taps “Share,” generating a unique, public, read-only URL.
+
+
+
+Visual feedback confirms copy/link success.
+
+Advanced Features & Edge Cases
+
+
+
+
+
+Allow bulk tagging or multi-song selection for speedy organization.
+
+
+
+Graceful error handling: e.g., duplicate song warnings, network issues, or unauthorized access with clear calls-to-action.
+
+
+
+Support empty states with helpful prompts (e.g., “No songs yet—add your first!”).
+
+UI/UX Highlights
+
+
+
+
+
+Prioritize one-handed mobile use: large targets, fixed action bar.
+
+
+
+High-contrast palette, clear system font, and large touch targets.
+
+
+
+Performance and speed—immediate feedback for all actions.
+
+
+
+Fully responsive for tablets and desktop, but always optimized for mobile-first.
+
+
+
+Narrative
+
+Rohan is a self-taught guitarist who often jams with friends at home. Each weekend, they try out new song themes—sometimes classic Bollywood, other times upbeat dance melodies or soulful tracks for late-night sessions. Rohan’s song notes were always scattered across messy notebooks, WhatsApp notes, and endless Google Docs, making it difficult to recreate the perfect setlist or find just the right song.
+
+With Setlist App, Rohan logs in from his phone, quickly adding recent discoveries and tagging them by mood, scale, and occasion. When a friend asks for “old school 80s romantic songs,” he simply applies two filter taps. The perfect playlist appears instantly, and with another tap, he shares a read-only link with the group. Together, they’re able to plan, organize, and even add new jams on the fly.
+
+What was once a hassle is now simple, fast, and delightful. Rohan spends less time searching and more time enjoying music with friends. The home jam session goes off smoothly—everyone’s impressed, the music flows, and Rohan’s the hero for making jamming seamless.
+
+
+
+Success Metrics
+
+User-Centric Metrics
+
+
+
+
+
+Number of active users weekly/monthly
+
+
+
+Songs added per user
+
+
+
+Setlists created and shared per user
+
+
+
+User retention after first and second week
+
+Business Metrics
+
+
+
+
+
+Total user signups and activation rate
+
+
+
+Setlists or songs shared (as a proxy for product value and reach)
+
+
+
+Referral shares (i.e., how many users join via shared links)
+
+Technical Metrics
+
+
+
+
+
+Median page load time on mobile (<1 second target)
+
+
+
+Error/crash rate (<1% sessions affected)
+
+
+
+Uptime (99.9%+ monthly)
+
+Tracking Plan
+
+
+
+
+
+User registration (event)
+
+
+
+Song add/edit/delete actions
+
+
+
+Tag add/edit/delete actions
+
+
+
+Setlist create/edit/share actions
+
+
+
+Search/filter usage
+
+
+
+Public link generation and accesses
+
+
+
+Technical Considerations
+
+Technical Needs
+
+
+
+
+
+Mobile-first, SSR-powered front-end (Next.js) for optimal performance.
+
+
+
+Flexible, scalable backend leveraging Convex DB for real-time data access.
+
+
+
+Rich filters and fast search, with responsive UI components.
+
+Integration Points
+
+
+
+
+
+MVP avoids 3rd-party integrations; future: YouTube, Spotify, or music API metadata fetch.
+
+Data Storage & Privacy
+
+
+
+
+
+User data stored securely in isolated, privacy-first manner.
+
+
+
+Each user’s music library private by default; public shares are explicit and read-only.
+
+
+
+Compliance with standard consumer privacy expectations (right to delete, data export).
+
+Scalability & Performance
+
+
+
+
+
+Designed for 95% mobile usage, low-latency responses, and quick startup even on poor connections.
+
+
+
+Elastic scaling on server-side and DB as user base grows.
+
+Potential Challenges
+
+
+
+
+
+Capturing all popular tagging needs without overwhelming UI.
+
+
+
+Ensuring true real-time, low-latency sync for setlist updates.
+
+
+
+Preventing abuse of sharing/link generation (link rate limitations).
+
+
+
+Milestones & Sequencing
+
+Project Estimate
+
+
+
+
+
+Small Team, Fast-Track MVP: 3–4 weeks total from kickoff to launch-ready.
+
+Team Size & Composition
+
+
+
+
+
+Lean team:
+
+
+
+
+
+1 Product Lead (also handles QA and PM duties)
+
+
+
+1 Full-Stack Engineer (Next.js + backend)
+
+
+
+1 UI Designer (contract or part-time)
+
+
+
+2–3 people, all hands-on.
+
+Suggested Phases
+
+1. Design Sprint (1 week)
+
+
+
+
+
+Deliverables:
+
+
+
+
+
+UI wireframes for song management, discovery, setlists, and sharing
+
+
+
+User flows and interaction prototypes
+
+
+
+Dependencies:
+
+
+
+
+
+Clear MVP feature scope
+
+2. Core Development (2 weeks)
+
+
+
+
+
+Deliverables:
+
+
+
+
+
+Deployment of SSR mobile app shell
+
+
+
+Implementation of song CRUD, tagging, filtering, search
+
+
+
+Basic setlist creation and manual song selection
+
+
+
+User authentication system
+
+
+
+Dependencies:
+
+
+
+
+
+Finalized UX/UI
+
+3. Sharing, Polish & Launch (1 week)
+
+
+
+
+
+Deliverables:
+
+
+
+
+
+Public sharing feature
+
+
+
+Edge case handling (error states, validation, empty screens)
+
+
+
+Performance audit, mobile testing
+
+
+
+Soft launch (invite-only, friends/family)
+
+
+
+Dependencies:
+
+
+
+
+
+All core flows bug-free
+
+4. Post-Launch Monitoring (ongoing)
+
+
+
+
+
+Deliverables:
+
+
+
+
+
+Track usage metrics, user feedback, error logs
+
+
+
+Fast bugfixes and backlog grooming
+

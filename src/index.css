@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-light: #fafaf9;
+  --color-dark: #1c1917;
+  --gradient-warm: linear-gradient(135deg, #f37a0a 0%, #e85d55 100%);
+  --gradient-sunset: linear-gradient(
+    135deg,
+    #facc15 0%,
+    #f37a0a 50%,
+    #e85d55 100%
+  );
+}
+
+/* [AI] Apple-like smooth scrolling and typography */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family:
+    "Inter Variable",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  color: var(--color-dark);
+  background: var(--color-light);
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* [AI] Dark mode support */
+.dark body {
+  color: #fafafa;
+  background: #1c1917;
+}
+
+/* [AI] Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* [AI] Apple-like button styles */
+.btn-primary {
+  @apply bg-gradient-warm text-white font-semibold py-3 px-6 rounded-container shadow-card hover:shadow-card-hover transition-all duration-200 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white/80 backdrop-blur-sm text-neutral-700 font-medium py-3 px-6 rounded-container border border-neutral-200 shadow-card hover:shadow-card-hover hover:bg-white transition-all duration-200 active:scale-95;
+}
+
+.dark .btn-secondary {
+  @apply bg-dark-100/80 text-dark-700 border-dark-200 hover:bg-dark-100;
+}
+
+/* [AI] Card styles with Apple-like aesthetics */
+.card {
+  @apply bg-white/80 backdrop-blur-sm rounded-container shadow-card hover:shadow-card-hover transition-all duration-200 border border-neutral-100;
+}
+
+.dark .card {
+  @apply bg-dark-100/80 border-dark-200;
+}
+
+.card-interactive {
+  @apply card hover:scale-[1.02] active:scale-[0.98] cursor-pointer;
+}
+
+/* [AI] Input field styles */
+.input-field {
+  @apply w-full px-4 py-3 rounded-container bg-white/80 backdrop-blur-sm border border-neutral-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all duration-200 shadow-sm hover:shadow;
+}
+
+.dark .input-field {
+  @apply bg-dark-100/80 border-dark-200 text-dark-700 focus:border-primary-400;
+}
+
+/* [AI] Floating action button */
+.fab {
+  @apply fixed bottom-20 right-6 w-14 h-14 bg-gradient-warm rounded-full shadow-card-hover flex items-center justify-center text-white transition-all duration-200 active:scale-95 z-50;
+}
+
+/* [AI] Bottom navigation safe area */
+.bottom-nav {
+  @apply fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-neutral-200 pb-safe-bottom z-40;
+}
+
+.dark .bottom-nav {
+  @apply bg-dark-100/95 border-dark-200;
+}
+
+/* [AI] Sidebar styles */
+.sidebar {
+  @apply fixed top-0 left-0 h-full w-80 bg-white/95 backdrop-blur-sm border-r border-neutral-200 transform transition-transform duration-300 z-30;
+}
+
+.dark .sidebar {
+  @apply bg-dark-100/95 border-dark-200;
+}
+
+/* [AI] Tag styles with warm colors */
+.tag {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 hover:scale-105;
+}
+
+.tag-primary {
+  @apply tag bg-primary-100 text-primary-700 hover:bg-primary-200;
+}
+
+.tag-secondary {
+  @apply tag bg-secondary-100 text-secondary-700 hover:bg-secondary-200;
+}
+
+.tag-accent {
+  @apply tag bg-accent-100 text-accent-700 hover:bg-accent-200;
+}
+
+/* [AI] Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+/* [AI] Glass morphism effect */
+.glass {
+  @apply bg-white/20 backdrop-blur-md border border-white/30;
+}
+
+.dark .glass {
+  @apply bg-dark-100/20 border-dark-200/30;
+}
